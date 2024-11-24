@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+body.dark-mode {
+    color: #fff;
+    background-color: #000;
+    transition: all 0.7s;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100vw;
+}
+header a img{
+    width: 20px;
+}
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+section div:not(:last-child) {
+    border-right: 1px solid #000;
+}
+section div {
+    padding: 10px 20px;
+}
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
+@media screen and (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
